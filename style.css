@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    
+    display: flex;
+    min-height: 100vh;
+    min-width: 100vw;
+    flex-direction: column;
+    background: linear-gradient(48deg,green, yellow);
+    justify-content: center;
+    
+   
+}
+h1{
+    color: blueviolet;
+    text-align: center;
+    font-size: 110px;
+}
+.Gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+   
+    
+    }
+
+.picture{
+        cursor: pointer;
+        max-height: 250px;
+        max-width: 250px;
+        transform: scale(1);
+        transition: transform 0.5s;
+        margin: 40px;
+    
+    }
+    
+    
+    
+.picture img{
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        margin: 20px;
+        box-shadow: 6px 7px 30px 4px #3b03bf
+       
+    }
+.picture:hover{
+       transform: scale(1.2);
+       opacity: 0.93;
+       
+    }
+   .popup{
+    animation: liquid_in 0.3s;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+   
+   }
+   .popup img{
+    width: 65%;
+    height:80%;
+    
+    }
+   
+   .popup.hidden{
+   display: none;
+   }
+   .popup_close{
+    color:darkviolet;
+    border: none;
+    background-color: transparent;
+    right: 25px;
+    top: 10px;
+    position: fixed;
+    font-size: 85px;
+   }
+   .popup.liquid_out{
+    animation: liquid_out 0.3s both;
+   }
+   .arrow_right{
+    left: 74%;
+    position: relative;
+    border-radius: 50px;
+    line-height: 50%;
+    font-size: 90px;
+    width: 80px;
+    height: 80px;
+   }
+    .arrow_left{
+        left: 1%;
+        position: relative;
+        border-radius: 50px;
+        line-height: 50%;
+        font-size: 90px;
+        width: 80px;
+        height: 80px;
+    }
+    @keyframes liquid_in{
+        from{
+            opacity: 0;
+        }to{
+opacity: 1;
+        }
+    }
+    @keyframes liquid_out{
+        from{
+            opacity: 1;
+        }to{
+            opacity: 0;
+        }
+    }
+    
